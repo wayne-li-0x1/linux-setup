@@ -51,6 +51,7 @@ set path = (/usr/local/bin $path)
 
 if ( $my_os == 'GNU/Linux' ) then
     echo "--- Specific setting for $my_os";
+    alias ls "ls --color" 
 endif
 
 echo "--- Done."
