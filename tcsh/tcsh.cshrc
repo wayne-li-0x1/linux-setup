@@ -43,6 +43,8 @@ alias env       "env |sort|less"
 alias ls 	"/bin/ls -G "
 alias gitlog    "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 alias dev	"cd ~/dev-sandbox"
+alias tarzip    "tar -cvf \!*.tar \!*; gzip \!*.tar"
+alias tarzip_replace    "tar -cvf \!*.tar \!*; gzip \!*.tar; rm -r \!*"
 
 #PATHs
 set path = (/usr/local/bin $path)
