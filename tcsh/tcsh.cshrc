@@ -1,5 +1,5 @@
-set my_os=`uname -o`
-set my_arch=`uname -i`
+set my_os=`uname -s`
+set my_arch=`uname -p`
 
 #Settings
 set prompt='%B%T%b@%m %/ %#.%?\% '
@@ -45,6 +45,8 @@ alias gitlog    "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%C
 alias dev	"cd ~/dev-sandbox"
 alias tarzip    "tar -cvf \!*.tar \!*; gzip \!*.tar"
 alias tarzip_replace    "tar -cvf \!*.tar \!*; gzip \!*.tar; rm -r \!*"
+alias tn        'tmux rename-window `basename $PWD`'
+
 
 #PATHs
 set path = (/usr/local/bin $path)
@@ -56,4 +58,7 @@ if ( $my_os == 'GNU/Linux' ) then
     alias ls "ls --color" 
 endif
 
+source "${HOME}/.cshrc.local"
+
 echo "--- Done."
+
